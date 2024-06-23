@@ -47,7 +47,7 @@ public class SecurityConfig {
 
     @Bean
     public PasswordEncoder passwordEncoder (){
-        return new BCryptPasswordEncoder(); ///implementacion de password encoder, no encripta pass, NO RECOMENDADO, inyectado en authprov
+        return new BCryptPasswordEncoder();
     }
 
 
