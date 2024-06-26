@@ -24,7 +24,7 @@ public class PermissionController {
     @GetMapping("/{id}")
     public ResponseEntity getPermissionById(@PathVariable Long id) {
         Optional<Permission> permission = permServ.findById(id);
-        return permission.map(ResponseEntity::ok).orElseGet(() -> ResponseEntity.notFound().build()); // :: ref a metodo, el lambda crea un response entity
+        return permission.map(ResponseEntity::ok).orElseGet(() -> ResponseEntity.notFound().build()); // :: ref a metodo a dif de () que espera un resultado, el lambda crea un response entity
 
     }
 
