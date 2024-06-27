@@ -4,7 +4,6 @@ import com.auth0.jwt.JWT;
 import com.auth0.jwt.JWTVerifier;
 import com.auth0.jwt.algorithms.Algorithm;
 import com.auth0.jwt.exceptions.JWTVerificationException;
-import com.auth0.jwt.impl.ClaimsHolder;
 import com.auth0.jwt.interfaces.Claim;
 import com.auth0.jwt.interfaces.DecodedJWT;
 import org.springframework.beans.factory.annotation.Value;
@@ -25,7 +24,7 @@ public class JwtUtils {
     private String userGenerator;
 
     //creo tokens
-    public String createToken(Authentication auth){
+    public String createToken(Authentication auth){ /// en auth voy a tener todos los datos del user para generar el token
 
         Algorithm algorithm = Algorithm.HMAC256(privateKey);
 
